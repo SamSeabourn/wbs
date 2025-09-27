@@ -1,0 +1,61 @@
+---
+export type Service = {
+	text: string;
+	iconSrc: string;
+	iconAlt: string;
+};
+
+interface Props {
+	services: Service[];
+}
+
+const { services } = Astro.props as Props;
+---
+
+<div class="grid">
+	{
+		services.map((s) => (
+			<div class="item">
+				<img src={s.iconSrc} alt={s.iconAlt} loading="lazy" />
+				<p> {s.text}</p>
+			</div>
+		))
+	}
+</div>
+
+<style>
+	.grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1rem 4rem;
+		width: 76%;
+		padding: 0 var(--spacing-size);
+	}
+
+	.item {
+		height: 7rem;
+		width: 100%;
+		text-align: center;
+		display: flex;
+		font-size: 2rem;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+	img {
+		margin-right: 1rem;
+		height: 3.5rem;
+		width: 3.5rem;
+		aspect-ratio: 1 / 1;
+	}
+
+	p {
+		text-align: left;
+	}
+
+	@media (max-width: 600px) {
+		.grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

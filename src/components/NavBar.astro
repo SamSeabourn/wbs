@@ -1,0 +1,54 @@
+---
+interface Props {
+	text: string;
+	logoSrc: string;
+	wordsToBold: string[];
+}
+
+const { text, logoSrc, wordsToBold } = Astro.props;
+---
+
+<nav>
+	<div>
+		<img src={logoSrc} alt="Logo" />
+	</div>
+	<h1>
+		{
+			text.split(' ').map((word) => {
+				if (wordsToBold?.includes(word)) {
+					return <span style="font-weight: 800;">{word + ' '}</span>;
+				}
+				return <span>{word + ' '}</span>;
+			})
+		}
+	</h1>
+</nav>
+
+<style>
+	img {
+		height: 3rem;
+	}
+
+	div {
+		margin-left: 1rem;
+	}
+
+	nav {
+		background-color: white;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+		display: flex;
+		height: 4.75rem;
+		align-items: center;
+		filter: drop-shadow(1px 8px 9px rgba(0, 0, 0, 0.2));
+		z-index: 1;
+		height: 4.75rem;
+		position: relative;
+	}
+
+	h1 {
+		font-family: 'PublicSansSubset', sans-serif;
+		font-weight: 500;
+		margin-left: 1rem;
+		letter-spacing: -0.075rem;
+	}
+</style>

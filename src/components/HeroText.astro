@@ -1,0 +1,30 @@
+---
+interface Props {
+	heroText: string;
+}
+
+const { heroText } = Astro.props as Props;
+---
+
+<div>
+	<h1>{heroText}</h1>
+</div>
+
+<style>
+	div {
+		align-content: center;
+		display: flex;
+		flex-wrap: wrap;
+		z-index: 10;
+		height: 100%;
+		width: 100%;
+		justify-content: center;
+		position: absolute;
+	}
+
+	h1 {
+		color: #fff;
+		font-size: 6rem;
+		filter: drop-shadow(1px 3px 20px rgba(0, 0, 0, 0.75));
+	}
+</style>

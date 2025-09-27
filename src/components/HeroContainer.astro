@@ -1,0 +1,28 @@
+---
+import HeroImageHighRes from './HeroImageHighRes.astro';
+import HeroImageLowRes from './HeroImageLowRes.astro';
+import HeroText from './HeroText.astro';
+
+interface Props {
+	lowRes: string;
+	highRes: string;
+	text: string;
+}
+
+const { lowRes, highRes, text } = Astro.props;
+---
+
+<section>
+	<HeroText heroText={text} />
+	<HeroImageLowRes lowRes={lowRes} />
+	<HeroImageHighRes highRes={highRes} />
+</section>
+<style>
+	section {
+		overflow: hidden;
+		display: block;
+		width: 100%;
+		height: 51rem;
+		position: relative;
+	}
+</style>

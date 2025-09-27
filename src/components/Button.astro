@@ -1,0 +1,61 @@
+---
+type ButtonVariant = 'primary' | 'secondary' | 'disabled';
+
+export interface Props {
+	variant?: ButtonVariant;
+}
+
+const { variant } = Astro.props as Props;
+const className = variant || 'primary';
+---
+
+<button type="button" class={className}>
+	<slot />
+</button>
+
+<style>
+	button {
+		padding: 0.5rem 2rem;
+		border-radius: 1.75rem;
+		border: 0.1rem solid transparent;
+		height: 3.5rem;
+		text-transform: uppercase;
+		min-width: 5rem;
+		font-size: 1.2rem;
+		font-weight: 800;
+		cursor: pointer;
+		transition: 333ms transform ease-in;
+	}
+
+	.primary {
+		background: var(--primary-color);
+		color: #000;
+	}
+
+	.secondary {
+		background: transparent;
+		border-color: var(--primary-color);
+		color: #111827;
+	}
+
+	button:hover {
+		transform: scale(1.05);
+		box-shadow:
+			0 0.5rem 1rem rgba(0, 0, 0, 0.15),
+			0 0 0.5rem var(--primary-color);
+	}
+
+	button:active {
+		transform: scale(0.95);
+		box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.3) inset;
+	}
+
+	button:disabled {
+		background: #e5e7eb;
+		color: #9ca3af;
+		cursor: not-allowed;
+		opacity: 0.7;
+		box-shadow: none;
+		transform: none;
+	}
+</style>

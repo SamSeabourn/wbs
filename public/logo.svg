@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd" viewBox="0 0 500 500">
+  <path fill="url(#a)" d="M220.2 498.2A250.2 250.2 0 0 1 .6 233.2l6.2-.1a275.1 275.1 0 0 1 274.8 265 252.1 252.1 0 0 1-61.4.1Z"/>
+  <path fill="url(#b)" d="M235.1 364A274.2 274.2 0 0 1 250 144.8a273.4 273.4 0 0 1 29.4 155 292.2 292.2 0 0 0-44.3 64.2Z"/>
+  <path fill="#ff2b50" d="M281.6 498a252.1 252.1 0 0 1-61.4.2 275.1 275.1 0 0 1 279.2-265.1A250.2 250.2 0 0 1 281.5 498Z"/>
+  <circle cx="205.2" cy="150" r="20" fill="#ad9d16"/>
+  <circle cx="250" cy="92.6" r="22.6" fill="#ad9d16"/>
+  <defs>
+    <linearGradient id="a" x1="0" x2="1" y1="0" y2="0" gradientTransform="matrix(270 120 -120 270 -20 260)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff2b50"/>
+      <stop offset=".6" stop-color="#ff2b50" stop-opacity=".8"/>
+      <stop offset=".8" stop-color="#ff2b50" stop-opacity=".4"/>
+      <stop offset="1" stop-color="#ff2b50" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="b" x1="0" x2="1" y1="0" y2="0" gradientTransform="rotate(90 45 205) scale(120)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#099d00"/>
+      <stop offset="1" stop-color="#044b00"/>
+    </linearGradient>
+  </defs>
+</svg>
