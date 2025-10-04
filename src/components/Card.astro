@@ -1,0 +1,46 @@
+---
+import type { CardType } from '../global';
+import Paragraph from './Paragraph.astro';
+
+export interface Props {
+	card: CardType;
+}
+
+const { card } = Astro.props as Props;
+---
+
+<div>
+	<span>{card.title}</span>
+	<img src={card.image} alt={card.imageAlt} loading="lazy" />
+	<Paragraph size="small" alignment="left" text={card.description} />
+</div>
+
+<style>
+	img {
+		width: 100%;
+		height: 15rem;
+	}
+
+	h4 {
+		height: 2rem;
+		font-size: 1.5rem;
+	}
+
+	div {
+		border-radius: 1rem;
+		width: 100%;
+		height: 35rem;
+		padding: 2rem;
+		background-color: #fff;
+		cursor: pointer;
+		transition:
+			transform 100ms ease-in-out,
+			filter 100ms ease-in-out;
+		filter: drop-shadow(0px 0px 9px rgba(0, 0, 0, 0.33));
+	}
+
+	div:hover {
+		transform: scale(1.01);
+		filter: drop-shadow(0px 0px 13px rgba(0, 0, 0, 0.33));
+	}
+</style>

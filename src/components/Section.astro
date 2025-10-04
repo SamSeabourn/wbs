@@ -1,4 +1,28 @@
-<section>
+---
+import type { CSSProperty } from 'astro/types';
+import { cssObjectToString } from '../helpers/css-object-to-string';
+
+interface Props {
+	color?: 'none' | 'black' | 'theme';
+	styleOverrides?: Partial<Record<string, CSSProperty>>;
+}
+
+const { color, styleOverrides } = Astro.props;
+
+let style = '';
+
+if (color === 'theme') {
+	style = 'background-color:var(--primary-color);';
+}
+if (color === 'black') {
+	style = 'background-color:#000;';
+}
+if (styleOverrides) {
+	style = style + cssObjectToString(styleOverrides);
+}
+---
+
+<section style={style}>
 	<slot />
 </section>
 
@@ -6,7 +30,8 @@
 	section {
 		display: flex;
 		justify-content: center;
-		margin-top: var(--spacing-size);
+		padding-top: calc(var(--spacing-size) / 2);
+		padding-bottom: calc(var(--spacing-size) / 2);
 		flex-direction: column;
 		align-items: center;
 	}

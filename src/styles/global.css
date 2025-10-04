@@ -4,13 +4,6 @@
 		--spacing-size: 5.25rem;
 	}
 
-	@font-face {
-		font-family: "PublicSansSubset";
-		src: url("PublicSans-Subset.woff2") format("woff2");
-		font-weight: normal;
-		font-style: normal;
-		font-display: swap;
-	}
     /* Resets */
 	* {
 		box-sizing: border-box;

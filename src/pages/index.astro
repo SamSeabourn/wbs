@@ -8,6 +8,8 @@ import TitleText from '../components/TitleText.astro';
 import Section from '../components/Section.astro';
 import Paragraph from '../components/Paragraph.astro';
 import ServicesGrid from '../components/ServicesGrid.astro';
+import CardGrid from '../components/CardGrid.astro';
+import Marquee from '../components/Marquee.astro';
 ---
 
 <Layout>
@@ -19,12 +21,16 @@ import ServicesGrid from '../components/ServicesGrid.astro';
 			lowRes="data:image/webp;base64,UklGRtADAABXRUJQVlA4TMQDAAAvGMADAE0obNsGDUnFQUT/A0C+wEJB2zZMEJQ/0u4PB5EgCNHk/3nuMClI24Cpf8ndof/B/B5PGPuTySFJAMBCksrVKI1te45rfGDve98n7RN8tE62PVbZVd2dlJNvSJIkSZEkD0iaWaYn7zf3zAxVmRHh0mztTTPHkiXbyTAz7mFmT11E+7Onm2TGwJkvZEdShFb6mwOr5P3++LcngWkT5Ykc/3B/ucnm9yiYCJuwpr01hidPklucJvLctGzbS+fe4JVAChT6dFqKWZRtoTxRlGg6uZoeFSV8FAAn20t1fDjU75nOpbdG/qS1hBy2ct6lx1qJsVWBYwF0NVQSFhhYj9O2N/GvQXbevf9mmPcPo/wYxWgMFzalb8M85lH9D/9cJjiEFBf1AzekOAs0+XH9fPf//W51Xn0GighquaDFw2phxzfYVdKYdU/tWj8KSH+wbUkcl7WPQLsltMxqs+/lCpdfPPXP6z/hPvmBfzUmXlR4U/eWtlO0bLXjZJ4MnxJrcTM5NZALiDOrMf4m+Mp+zanMIhlluejpih5Mgnwk9f9KOWHU9rtn5c3u7FxGujzarv2/O0GCQyhLLFaKiB62+22iwRxLilHkBMXu3b/7HYbVWQmCaBL0+SN9/7z8XQ38q4xOwdHvVoURzZ5iRt6qiV4moL0tNrmS0KSoxZ5p4kr3Jd9vu+P2pgltYVuYKN85+vDQFVuBOM94a+yOepwP7vchQA+bOI1syZBz3rbhQyXIzqQckFm++0+VfXTpoZa6Yj9X+/OE8eYShn1WQ8IhtheWV6RvnQk7ycpDWlER66D60B5b+ocuCVgGQwd5qRIFQrVQoWtOLTelHn18XRWKzqeOu97Wa3q7IqeneLqa+3JEvAI50rjJFEFCeCOqdjz1dy5MR+jSFNqwFC6ONPluSF7NAO8CJupb67DQtq/G6Zru4M69WM5u6NFCDVIsjm3pPX1r8pdntZFrtVig4zrChHMPxvlbjFxvAMsMrWZjvdGp/f79L27w9toe3L8tuRdmV5Z640FB0gGNL4IoNPzY8HS6IoVVlMZUPvr2gu4FjBM3qFvQtvKi2gf3P0PMfIg5t+dDwd5sOaGnhwDGh6YdG7St/zknsgBiKhBwDluN9yNEiapwx6CdnE+mu9GSSwXgxfJWrIH71RqsirQkPNjQXciVJ8RgYmNqGRAG550z+DQBKWIzZF7STBp4DFWWOvJxxDhDSu6QiTJAQBvbYiUc5ZLR4AZwUyWehuECzo1qUICqJLdCQwoBZFVre2qXJxR5p6Yo"
 		/>
 		<Section>
-			<TitleText text={'What we do'} wordsToBold={['']} />
+			<TitleText text={'Us'} />
 			<Paragraph
+				size="large"
+				alignment="center"
 				text={'Weston Botanical Services was founded by scientists Peter and Nicholas Weston. Together they bring over 45 years of experience and specialise in environemntal science and botany'}
 			/>
 		</Section>
 		<Section>
+			<TitleText text={'Our Services'} />
+
 			<ServicesGrid
 				services={[
 					{
@@ -69,12 +75,50 @@ import ServicesGrid from '../components/ServicesGrid.astro';
 					},
 				]}
 			/>
-			<div style="margin-top:1.5rem;">
+			<div style="margin-top:2rem;">
 				<Button variant="primary">LEARN MORE</Button>
 			</div>
 		</Section>
-		<Section />
-		<Button variant="primary">Cooked</Button>
-		<Button variant="secondary">Cooked</Button>
+		<Section color="theme">
+			<TitleText text={'Our Projects'} />
+			<CardGrid
+				cards={[
+					{
+						title: 'Some project name',
+						image: 'projects/project1/1.webp',
+						imageAlt: 'Man measuring treeline',
+						description:
+							'orem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat mass',
+					},
+					{
+						title: 'Another rad name',
+						image: 'projects/project1/2.webp',
+						imageAlt: 'Man measuring treeline',
+						description:
+							'orem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat mass',
+					},
+					{
+						title: 'cool name',
+						image: 'projects/project1/3.webp',
+						imageAlt: 'Man measuring treeline',
+						description:
+							'orem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat mass',
+					},
+				]}
+			/>
+		</Section>
+		<Section
+			color="black"
+			styleOverrides={{
+				flexDirection: 'row',
+				gap: 'calc(var(--spacing-size))',
+			}}
+		>
+			<Marquee />
+			<TitleText text="Our Clients" invert />
+		</Section>
+
+		<!-- <Button variant="primary">Cooked</Button>
+		<Button variant="secondary">Cooked</Button> -->
 	</PageCenter>
 </Layout>

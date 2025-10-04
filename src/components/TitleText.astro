@@ -1,20 +1,24 @@
 ---
 export interface Props {
 	text: string;
-	wordsToBold: string[];
+	wordsToBold?: string[];
+	invert?: boolean;
 }
 
-const { text, wordsToBold } = Astro.props as Props;
+const { text, wordsToBold, invert } = Astro.props as Props;
+const textStyle = `color:${invert ? '#fff' : '#000'}`;
 ---
 
-<h2>
+<h2 style={textStyle}>
 	{
-		text.split(' ').map((word) => {
-			if (wordsToBold?.includes(word)) {
-				return <span style="font-weight: 800;">{word + ' '}</span>;
-			}
-			return <span>{word + ' '}</span>;
-		})
+		wordsToBold
+			? text.split(' ').map((word) => {
+					if (wordsToBold?.includes(word)) {
+						return <span style="font-weight: 800;">{word + ' '}</span>;
+					}
+					return <span>{word + ' '}</span>;
+				})
+			: text
 	}
 </h2>
 
@@ -23,6 +27,6 @@ const { text, wordsToBold } = Astro.props as Props;
 		font-size: 4.5rem;
 		font-weight: 500;
 		letter-spacing: -0.03rem;
-		margin-bottom: calc(var(--spacing-size) / 2);
+		margin-bottom: calc(var(--spacing-size) / 3);
 	}
 </style>
