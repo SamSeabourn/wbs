@@ -1,4 +1,6 @@
 ---
+import Paragraph from './Paragraph.astro';
+
 export type Service = {
 	text: string;
 	iconSrc: string;
@@ -14,10 +16,10 @@ const { services } = Astro.props as Props;
 
 <div class="grid">
 	{
-		services.map((s) => (
+		services.map((s, i) => (
 			<div class="item">
-				<img src={s.iconSrc} alt={s.iconAlt} loading="lazy" />
-				<p> {s.text}</p>
+				<img src={s.iconSrc} alt={s.iconAlt} loading={i < 2 ? 'eager' : 'lazy'} />
+				<Paragraph text={s.text} alignment="left" size="medium" />
 			</div>
 		))
 	}
@@ -28,7 +30,7 @@ const { services } = Astro.props as Props;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 1rem 4rem;
-		width: 76%;
+		width: 80%;
 		padding: 0 var(--spacing-size);
 	}
 
@@ -37,9 +39,12 @@ const { services } = Astro.props as Props;
 		width: 100%;
 		text-align: center;
 		display: flex;
+		padding: 1rem;
 		font-size: 2rem;
 		justify-content: flex-start;
 		align-items: center;
+		border-radius: 1rem;
+		background: #ffffff;
 	}
 
 	img {
@@ -52,6 +57,12 @@ const { services } = Astro.props as Props;
 	p {
 		text-align: left;
 		line-height: 1.2;
+		color: hsl(264, 31%, 13%);
+		font-family: 'Ubuntu Sans', sans-serif;
+		font-optical-sizing: auto;
+		font-weight: 500;
+		font-style: normal;
+		font-variation-settings: 'wdth' 100;
 	}
 
 	@media (max-width: 600px) {

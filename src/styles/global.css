@@ -1,8 +1,12 @@
 	/* Variables */
     :root {
 		--primary-color: hsl(161, 84%, 53%);
+		--text-color: hsl(264,31%,13%);
+		--secondary-darl-color: hsl(293, 82%, 2%);
 		--spacing-size: 5.25rem;
 	}
+
+	/* TODO: remove these and make them faster */
 
     /* Resets */
 	* {
@@ -25,8 +29,9 @@
 		margin: 0;
 		width: 100%;
 		height: 100%;
+		background-color: #fafafa;
 	}
-    	button {
+    button {
 		all: unset;
 		box-sizing: border-box;
 		cursor: pointer;
@@ -35,3 +40,5 @@
 		justify-content: center;
 	}
 
+
+	

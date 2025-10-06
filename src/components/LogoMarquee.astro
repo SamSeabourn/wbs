@@ -1,0 +1,74 @@
+---
+import type { ImageType } from '../global';
+
+interface Props {
+	logos: ImageType[];
+}
+
+const { logos } = Astro.props as Props;
+---
+
+<div>
+	<div class="marquee">
+		<div class="marquee-item" style={`animation-duration: ${logos.length * 10}s;`}>
+			{logos.map((l) => <img loading="lazy" src={l.src} alt={l.alt} />)}
+		</div>
+		<div class="marquee-item" style={`animation-duration: ${logos.length * 10}s;`} aria-hidden>
+			{logos.map((l) => <img loading="lazy" src={l.src} alt={l.alt} />)}
+		</div>
+	</div>
+	<div class="gradient-overlay"></div>
+</div>
+
+<style>
+	.gradient-overlay {
+		pointer-events: none;
+		width: 55.1rem;
+		height: 16rem;
+		position: absolute;
+		transform: translateY(-16rem);
+		background: linear-gradient(
+			90deg,
+			rgba(0, 0, 0, 1) 5%,
+			rgba(0, 0, 0, 0) 20%,
+			rgba(0, 0, 0, 0) 50%,
+			rgba(0, 0, 0, 0.08) 80%,
+			rgba(0, 0, 0, 1) 95%
+		);
+	}
+
+	.marquee {
+		display: flex;
+		overflow: hidden;
+		white-space: nowrap;
+		width: 55rem;
+	}
+
+	.marquee-item {
+		color: #fff;
+		animation-iteration-count: infinite;
+		animation-name: marquee-content;
+		animation-timing-function: linear;
+	}
+
+	img {
+		width: 14rem;
+		height: 14rem;
+		margin-left: 1rem;
+		margin-right: 1rem;
+		shape-rendering: geometricPrecision;
+	}
+
+	.marquee:hover .marquee-item {
+		animation-play-state: paused;
+	}
+
+	@keyframes marquee-content {
+		from {
+			transform: translateX(0%);
+		}
+		to {
+			transform: translateX(-100%);
+		}
+	}
+</style>

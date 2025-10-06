@@ -4,3 +4,8 @@ export type CardType = {
 	image: string;
 	imageAlt: string;
 };
+
+export type ImageType = {
+	alt: string;
+	src: string;
+}

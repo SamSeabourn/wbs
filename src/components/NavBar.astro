@@ -12,7 +12,7 @@ const { text, logoSrc, wordsToBold } = Astro.props;
 	<div>
 		<img src={logoSrc} alt="Logo" />
 	</div>
-	<h1 id="navTitle">
+	<h1>
 		{
 			text.split(' ').map((word) => {
 				if (wordsToBold?.includes(word)) {
@@ -46,9 +46,35 @@ const { text, logoSrc, wordsToBold } = Astro.props;
 		position: relative;
 	}
 
-	.navTitle {
-		font-weight: 500;
-		margin-left: 1rem;
+	h1 {
+		margin-left: 0.5rem;
+	}
+
+	h1,
+	span {
 		letter-spacing: -0.075rem;
+
+		/* font-family: 'Secular One', sans-serif;
+		font-weight: 400;
+		font-style: normal; */
+
+		/* font-family: 'Montserrat', sans-serif;
+		font-optical-sizing: auto;
+		font-style: normal;
+		font-weight: 500; */
+
+		/* font-family: 'Radio Canada', sans-serif;
+		font-optical-sizing: auto;
+		font-weight: 400;
+		font-style: normal;
+		font-variation-settings: 'wdth' 100; */
+
+		font-family: 'Nunito Sans', sans-serif;
+		font-optical-sizing: auto;
+		font-weight: 600;
+		font-style: normal;
+		font-variation-settings:
+			'wdth' 100,
+			'YTLC' 500;
 	}
 </style>

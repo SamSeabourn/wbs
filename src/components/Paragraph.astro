@@ -3,18 +3,25 @@ interface Props {
 	text: string;
 	size: 'small' | 'medium' | 'large';
 	alignment: 'center' | 'left';
+	color?: string;
 }
 
-const { text, size, alignment } = Astro.props as Props;
-let style = 'font-size: 0.5rem;line-height: 1.3;'; // medium
+const { text, size, alignment, color } = Astro.props as Props;
+
+
+console.log('***', {text, color})
+let style = 'font-size: 2.1rem;line-height: 1.3;'; // medium
 if (size === 'small') {
-	style = 'font-size: 1.15rem;line-height: 1.25;';
+	style = 'font-size: 1.3rem;line-height: 1.25;';
 }
 if (size === 'large') {
-	style = 'font-size: 2rem;line-height: 1.3;';
+	style = 'font-size: 3rem;line-height: 1.3;';
 }
+if (color) {
+	style = style + `color: ${color};`
+}
+style = style + `text-align:${alignment};`;
 
-style = style + `text-align: ${alignment};`;
 ---
 
 <p style={style}>{text}</p>
@@ -22,6 +29,11 @@ style = style + `text-align: ${alignment};`;
 	p {
 		max-width: 57rem;
 		text-align: center;
-		color: hsl(0, 0%, 28%);
+		color: var(--text-color)
+		font-family: 'Ubuntu Sans', sans-serif;
+		font-optical-sizing: auto;
+		font-weight: 00;
+		font-style: normal;
+		font-variation-settings: 'wdth' 100;
 	}
 </style>
