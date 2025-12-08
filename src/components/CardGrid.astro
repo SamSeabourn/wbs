@@ -9,43 +9,6 @@ interface Props {
 const { cards } = Astro.props as Props;
 ---
 
-<div class="grid">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 pl-2">
 	{cards.map((c) => <Card card={c} />)}
 </div>
-
-<style>
-	.grid {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		gap: calc(var(--spacing-size) / 3);
-		width: 76%;
-		padding: 0 var(--spacing-size);
-		justify-content: space-between;
-		justify-items: center;
-	}
-
-	img {
-		margin-right: 1rem;
-		height: 3.5rem;
-		width: 3.5rem;
-		aspect-ratio: 1 / 1;
-		object-fit: cover;
-	}
-
-	p {
-		text-align: left;
-		line-height: 1.2;
-	}
-
-	@media (max-width: 1024px) {
-		.grid {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
-
-	@media (max-width: 600px) {
-		.grid {
-			grid-template-columns: 1fr;
-		}
-	}
-</style>

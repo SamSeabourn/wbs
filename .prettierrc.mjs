@@ -27,6 +27,5 @@ export default {
 				tabWidth: 2,
 			},
 		},
-		{ files: '*.svelte', options: { parser: 'svelte' } },
 	],
 };

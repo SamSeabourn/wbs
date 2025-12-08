@@ -1,80 +1,40 @@
 ---
 interface Props {
-	text: string;
 	logoSrc: string;
-	wordsToBold: string[];
 }
 
-const { text, logoSrc, wordsToBold } = Astro.props;
+const { logoSrc } = Astro.props;
 ---
 
-<nav>
-	<div>
-		<img src={logoSrc} alt="Logo" />
+<nav class="navbar bg-base-100 shadow-sm">
+	<div class="flex-1 flex items-center space-x-2">
+		<img src={logoSrc} class="h-10 w-auto object-contain ml-2" alt="Scientific Logo" />
 	</div>
-	<h1>
-		{
-			text.split(' ').map((word) => {
-				if (wordsToBold?.includes(word)) {
-					return <span style="font-weight: 800;">{word + ' '}</span>;
-				}
-				return <span>{word + ' '}</span>;
-			})
-		}
-	</h1>
+
+	<div class="flex-none hidden md:visible">
+		<ul class="menu menu-horizontal px-1">
+			<li>
+				<a href="./">Link 1</a>
+			</li>
+			<li>
+				<a href="./">Link 2</a>
+			</li>
+			<li>
+				<a href="./">Link 3</a>
+			</li>
+		</ul>
+	</div>
+	<div class="visible md:hidden dropdown dropdown-end">
+		<button tabindex="0" class="btn-neutral m-1">
+			<img loading="lazy" alt="Menu Icon" width="32px" src="./icons/icon-hamberger.svg" />
+		</button>
+		<ul tabindex="-1" class="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+			<li>
+				<a href="./">Link</a>
+			</li>
+			<li>
+				<a href="./">Link</a>
+			</li>
+		</ul>
+	</div>
 </nav>
-
-<style>
-	img {
-		height: 3rem;
-		margin-right: 1rem;
-	}
-
-	div {
-		margin-left: 1rem;
-	}
-
-	nav {
-		background-color: white;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-		display: flex;
-		height: 4.75rem;
-		align-items: center;
-		filter: drop-shadow(1px 8px 9px rgba(0, 0, 0, 0.2));
-		z-index: 1;
-		height: 4.75rem;
-		position: relative;
-	}
-
-	h1 {
-		margin-left: 0.5rem;
-	}
-
-	h1,
-	span {
-		letter-spacing: -0.075rem;
-
-		/* font-family: 'Secular One', sans-serif;
-		font-weight: 400;
-		font-style: normal; */
-
-		/* font-family: 'Montserrat', sans-serif;
-		font-optical-sizing: auto;
-		font-style: normal;
-		font-weight: 500; */
-
-		/* font-family: 'Radio Canada', sans-serif;
-		font-optical-sizing: auto;
-		font-weight: 400;
-		font-style: normal;
-		font-variation-settings: 'wdth' 100; */
-
-		font-family: 'Nunito Sans', sans-serif;
-		font-optical-sizing: auto;
-		font-weight: 600;
-		font-style: normal;
-		font-variation-settings:
-			'wdth' 100,
-			'YTLC' 500;
-	}
-</style>

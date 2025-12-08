@@ -25,12 +25,19 @@ const { heroText } = Astro.props as Props;
 	h1 {
 		color: #fff;
 		font-size: 6rem;
-		filter: drop-shadow(1px 3px 20px rgba(0, 0, 0, 0.75));
+		filter: drop-shadow(1px 1px 13px rgba(0, 0, 0, 1));
 		letter-spacing: 0.15rem;
-		font-family: 'Merriweather', serif;
 		font-optical-sizing: auto;
 		font-weight: 800;
 		font-style: oblique;
-		font-variation-settings: 'wdth' 100;
+		font-variation-settings: 'width' 100;
+	}
+
+	@media (max-width: 640px) {
+		h1 {
+			font-size: 4rem;
+			text-align: center;
+			line-height: 120%;
+		}
 	}
 </style>

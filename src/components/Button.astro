@@ -1,62 +1,11 @@
 ---
-type ButtonVariant = 'primary' | 'secondary' | 'disabled';
-
-export interface Props {
-	variant?: ButtonVariant;
+interface Props {
+	buttonType: 'primary' | 'secondary';
 }
 
-const { variant } = Astro.props as Props;
-const className = variant || 'primary';
+const { buttonType } = Astro.props;
 ---
 
-<button type="button" class={className}>
-	<slot />
-</button>
-
-<style>
-	button {
-		padding: 0.5rem 2rem;
-		border-radius: 1.75rem;
-		border: 0.1rem solid transparent;
-		height: 3.5rem;
-		text-transform: uppercase;
-		min-width: 5rem;
-		font-size: 1.2rem;
-		font-weight: 800;
-		cursor: pointer;
-		filter: drop-shadow(0px 0px 9px rgba(0, 0, 0, 0.33));
-		transition:
-			transform 100ms ease-in-out,
-			filter 100ms ease-in-out;
-	}
-
-	.primary {
-		background: var(--primary-color);
-		color: var(--secondary-dark-color);
-	}
-
-	.secondary {
-		background: transparent;
-		border-color: var(--primary-color);
-		color: #111827;
-	}
-
-	button:hover {
-		transform: scale(1.01);
-		filter: drop-shadow(0px 0px 13px rgba(0, 0, 0, 0.33));
-	}
-
-	button:active {
-		transform: scale(0.95);
-		box-shadow: 0 0.15rem 0.5rem rgba(0, 0, 0, 0.3) inset;
-	}
-
-	button:disabled {
-		background: #e5e7eb;
-		color: #9ca3af;
-		cursor: not-allowed;
-		opacity: 0.7;
-		box-shadow: none;
-		transform: none;
-	}
-</style>
+<button class=`btn btn-xs btn-${buttonType} sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl`
+	><slot /></button
+>
