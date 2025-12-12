@@ -5,9 +5,10 @@ import { cssObjectToString } from '../helpers/css-object-to-string';
 interface Props {
 	color?: 'none' | 'black' | 'theme';
 	styleOverrides?: Partial<Record<string, CSSProperty>>;
+	className?: string;
 }
 
-const { color, styleOverrides } = Astro.props;
+const { color, styleOverrides, className } = Astro.props;
 
 let style = '';
 
@@ -22,7 +23,7 @@ if (styleOverrides) {
 }
 ---
 
-<section style={style} class="mt-8 mb-10">
+<section style={style} class=`mt-8 mb-10 ${className}`>
 	<slot />
 </section>
 

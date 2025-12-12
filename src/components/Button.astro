@@ -6,6 +6,4 @@ interface Props {
 const { buttonType } = Astro.props;
 ---
 
-<button class=`btn btn-xs btn-${buttonType} sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl`
-	><slot /></button
->
+<button class=`btn btn-${buttonType} `><slot /></button>

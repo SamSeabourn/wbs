@@ -11,7 +11,7 @@ const { logoSrc } = Astro.props;
 		<img src={logoSrc} class="h-10 w-auto object-contain ml-2" alt="Scientific Logo" />
 	</div>
 
-	<div class="flex-none hidden md:visible">
+	<div id="mormal" class="sm:hidden">
 		<ul class="menu menu-horizontal px-1">
 			<li>
 				<a href="./">Link 1</a>
@@ -24,7 +24,7 @@ const { logoSrc } = Astro.props;
 			</li>
 		</ul>
 	</div>
-	<div class="visible md:hidden dropdown dropdown-end">
+	<div id="hamberg" class="visible md:hidden dropdown dropdown-end">
 		<button tabindex="0" class="btn-neutral m-1">
 			<img loading="lazy" alt="Menu Icon" width="32px" src="./icons/icon-hamberger.svg" />
 		</button>

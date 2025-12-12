@@ -3,3 +3,46 @@
 @plugin "daisyui" {
 	  themes: light --default, dark --prefersdark, cupcake;
 }
+@plugin "daisyui/theme" {
+	name: "mytheme";
+	default: true; /* set as default */
+	prefersdark: false; /* set as default dark mode (prefers-color-scheme:dark) */
+	color-scheme: light; /* color of browser-provided UI */
+
+	--color-base-100: #fafafa;
+	--color-base-200: #c8ed61; 
+	--color-base-300: #e6e6e6; 
+	--color-base-content: #333333;
+	--color-primary: #8c5fe8;
+	--color-primary-content: #fafafa;
+	--color-secondary: #9ab3f2;
+	--color-secondary-content: #fafafa;
+	--color-accent: #6ad6c7;
+	--color-accent-content: #fafafa;
+	--color-neutral: #7f7f7f;
+	--color-neutral-content: #fafafa;
+	--color-info: #7da1f2;
+	--color-info-content: #fafafa;
+	--color-success: #6ad67b;
+	--color-success-content: #fafafa;
+	--color-warning: #b4e86c;
+	--color-warning-content: #333333;
+	--color-error: #e89a4d;
+	--color-error-content: #fafafa;
+
+	/* border radius */
+	--radius-selector: 1rem;
+	--radius-field: 1rem;
+	--radius-box: 0.5rem;
+
+	/* base sizes */
+	--size-selector: 0.25rem;
+	--size-field: 0.25rem;
+
+	/* border size */
+	--border: 1px;
+
+	/* effects */
+	--depth: 1;
+	--noise: 0;
+}

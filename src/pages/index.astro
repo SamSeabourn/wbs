@@ -107,13 +107,19 @@ import Button from '../components/Button.astro';
 				]}
 			/>
 		</Section>
-		<!-- <Section
-			color="black"
-			styleOverrides={{
-				flexDirection: 'row',
-				gap: '1rem',
-			}}
-		>
+		<Section className="flex flex-col md:flex-row gap-4 p-12 mb-0!" color="black">
+			<div class="pl-2 pr-2 mt-20 w-[80%] md:w-[30%]">
+				<h1 class="text-4xl font-bold leading-tight text-white">Work with us</h1>
+				<Paragraph
+					text="Join our list of satisfied clients across government and industry"
+					size="medium"
+					fontWeight={100}
+					alignment="left"
+					color="#fefefe"
+				/>
+				<br />
+				<Button buttonType="primary"> Lets talk</Button>
+			</div>
 			<LogoMarquee
 				logos={[
 					{
@@ -150,18 +156,6 @@ import Button from '../components/Button.astro';
 					},
 				]}
 			/>
-			<div style="width: 40%;">
-				<h1 class="text-4xl font-bold leading-tight">Work with us</h1>
-				<Paragraph
-					text="Join our list of satisfied clients across government and industry"
-					size="medium"
-					alignment="left"
-					color="white"
-				/>
-				<br />
-				<br />
-				<Button buttonType="primary"> Lets talk</Button>
-			</div>
-		</Section> -->
+		</Section>
 	</PageCenter>
 </Layout>
