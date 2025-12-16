@@ -1,9 +1,13 @@
 ---
 interface Props {
 	logoSrc: string;
+	navItems: {
+		text: string;
+		url: string;
+	}[];
 }
 
-const { logoSrc } = Astro.props;
+const { logoSrc, navItems } = Astro.props;
 ---
 
 <nav class="navbar bg-base-100 shadow-sm">
@@ -11,30 +15,34 @@ const { logoSrc } = Astro.props;
 		<img src={logoSrc} class="h-10 w-auto object-contain ml-2" alt="Scientific Logo" />
 	</div>
 
-	<div id="mormal" class="sm:hidden">
+	<!-- Normal nav: hidden on small, shown on sm+ -->
+	<div id="normal" class="hidden sm:block">
 		<ul class="menu menu-horizontal px-1">
-			<li>
-				<a href="./">Link 1</a>
-			</li>
-			<li>
-				<a href="./">Link 2</a>
-			</li>
-			<li>
-				<a href="./">Link 3</a>
-			</li>
+			{
+				navItems.map((ni) => {
+					return (
+						<li>
+							<a href={ni.url}>{ni.text}</a>
+						</li>
+					);
+				})
+			}
 		</ul>
 	</div>
-	<div id="hamberg" class="visible md:hidden dropdown dropdown-end">
+	<div id="hamberger" class="block sm:hidden dropdown dropdown-end">
 		<button tabindex="0" class="btn-neutral m-1">
 			<img loading="lazy" alt="Menu Icon" width="32px" src="./icons/icon-hamberger.svg" />
 		</button>
 		<ul tabindex="-1" class="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
-			<li>
-				<a href="./">Link</a>
-			</li>
-			<li>
-				<a href="./">Link</a>
-			</li>
+			{
+				navItems.map((ni) => {
+					return (
+						<li>
+							<a href={ni.url}>{ni.text}</a>
+						</li>
+					);
+				})
+			}
 		</ul>
 	</div>
 </nav>

@@ -1,37 +1,19 @@
 ---
-import PageCenter from '../layouts/PageCenter.astro';
-import Layout from '../layouts/Layout.astro';
-import NavBar from '../components/NavBar.astro';
-import HeroContainer from '../components/HeroContainer.astro';
-import Section from '../components/Section.astro';
-import Paragraph from '../components/Paragraph.astro';
-import ServicesGrid from '../components/ServicesGrid.astro';
-import CardGrid from '../components/CardGrid.astro';
-import LogoMarquee from '../components/LogoMarquee.astro';
-import Heading from '../components/Heading.astro';
-import SectionText from '../components/SectionText.astro';
-import Button from '../components/Button.astro';
+import PageCenter from '../../layouts/PageCenter.astro';
+import Layout from '../../layouts/Layout.astro';
+import HeroContainer from '../../components/HeroContainer.astro';
+import Section from '../../components/Section.astro';
+import Paragraph from '../../components/Paragraph.astro';
+import ServicesGrid from '../../components/ServicesGrid.astro';
+import CardGrid from '../../components/CardGrid.astro';
+import LogoMarquee from '../../components/LogoMarquee.astro';
+import Heading from '../../components/Heading.astro';
+import SectionText from '../../components/SectionText.astro';
+import Button from '../../components/Button.astro';
 ---
 
 <Layout>
 	<PageCenter>
-		<NavBar
-			logoSrc="logo.svg"
-			navItems={[
-				{
-					url: './about',
-					text: 'About us',
-				},
-				{
-					url: './services',
-					text: 'Our Services ',
-				},
-				{
-					url: './projects',
-					text: 'Projects',
-				},
-			]}
-		/>
 		<HeroContainer
 			text="Scientific Botanical Consulting"
 			highRes="hero.webp"

@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
 	output: 'static',
-	site: 'https://weston-botanical-services.com.au',
+	site: 'https://samseabourn.github.io',
 
 	// @ts-expect-error No type here yet, upstream PR maybe?
 	integrations: [tailwindcss()],

@@ -17,7 +17,7 @@ const { services } = Astro.props as Props;
 <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 pl-2 pr-2">
 	{
 		services.map((s) => (
-			<div class="card card-side bg-base-100 shadow-sm">
+			<div class="card card-side bg-base-100">
 				<figure>
 					<img loading="lazy" class="m-4" src={s.iconSrc} alt={s.iconAlt} />
 				</figure>
