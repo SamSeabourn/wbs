@@ -1,0 +1,20 @@
+---
+interface Props {
+	logoSrc: string;
+}
+
+const { logoSrc } = Astro.props;
+---
+
+<nav class="navbar bg-base-100 justify-end shadow-sm)">
+	<div class="flex-1 flex items-center space-x-2">
+		<img src={logoSrc} class="h-10 w-auto object-contain ml-2" alt="Scientific Logo" />
+	</div>
+	<div>
+		<ul class="menu menu-horizontal  px-1">
+			<li>
+				<a class="white" href={'/'}>Go Back</a>
+			</li>
+		</ul>
+	</div>
+</nav>

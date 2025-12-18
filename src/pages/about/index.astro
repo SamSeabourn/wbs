@@ -1,159 +1,79 @@
 ---
 import PageCenter from '../../layouts/PageCenter.astro';
 import Layout from '../../layouts/Layout.astro';
-import HeroContainer from '../../components/HeroContainer.astro';
+import Banner from '../../components/Banner.astro';
 import Section from '../../components/Section.astro';
-import Paragraph from '../../components/Paragraph.astro';
-import ServicesGrid from '../../components/ServicesGrid.astro';
-import CardGrid from '../../components/CardGrid.astro';
-import LogoMarquee from '../../components/LogoMarquee.astro';
 import Heading from '../../components/Heading.astro';
 import SectionText from '../../components/SectionText.astro';
-import Button from '../../components/Button.astro';
+import BackOnlyNav from '../../components/BackOnlyNav.astro';
 ---
 
 <Layout>
 	<PageCenter>
-		<HeroContainer
-			text="Scientific Botanical Consulting"
-			highRes="hero.webp"
-			lowRes="data:image/webp;base64,UklGRtADAABXRUJQVlA4TMQDAAAvGMADAE0obNsGDUnFQUT/A0C+wEJB2zZMEJQ/0u4PB5EgCNHk/3nuMClI24Cpf8ndof/B/B5PGPuTySFJAMBCksrVKI1te45rfGDve98n7RN8tE62PVbZVd2dlJNvSJIkSZEkD0iaWaYn7zf3zAxVmRHh0mztTTPHkiXbyTAz7mFmT11E+7Onm2TGwJkvZEdShFb6mwOr5P3++LcngWkT5Ykc/3B/ucnm9yiYCJuwpr01hidPklucJvLctGzbS+fe4JVAChT6dFqKWZRtoTxRlGg6uZoeFSV8FAAn20t1fDjU75nOpbdG/qS1hBy2ct6lx1qJsVWBYwF0NVQSFhhYj9O2N/GvQXbevf9mmPcPo/wYxWgMFzalb8M85lH9D/9cJjiEFBf1AzekOAs0+XH9fPf//W51Xn0GighquaDFw2phxzfYVdKYdU/tWj8KSH+wbUkcl7WPQLsltMxqs+/lCpdfPPXP6z/hPvmBfzUmXlR4U/eWtlO0bLXjZJ4MnxJrcTM5NZALiDOrMf4m+Mp+zanMIhlluejpih5Mgnwk9f9KOWHU9rtn5c3u7FxGujzarv2/O0GCQyhLLFaKiB62+22iwRxLilHkBMXu3b/7HYbVWQmCaBL0+SN9/7z8XQ38q4xOwdHvVoURzZ5iRt6qiV4moL0tNrmS0KSoxZ5p4kr3Jd9vu+P2pgltYVuYKN85+vDQFVuBOM94a+yOepwP7vchQA+bOI1syZBz3rbhQyXIzqQckFm++0+VfXTpoZa6Yj9X+/OE8eYShn1WQ8IhtheWV6RvnQk7ycpDWlER66D60B5b+ocuCVgGQwd5qRIFQrVQoWtOLTelHn18XRWKzqeOu97Wa3q7IqeneLqa+3JEvAI50rjJFEFCeCOqdjz1dy5MR+jSFNqwFC6ONPluSF7NAO8CJupb67DQtq/G6Zru4M69WM5u6NFCDVIsjm3pPX1r8pdntZFrtVig4zrChHMPxvlbjFxvAMsMrWZjvdGp/f79L27w9toe3L8tuRdmV5Z640FB0gGNL4IoNPzY8HS6IoVVlMZUPvr2gu4FjBM3qFvQtvKi2gf3P0PMfIg5t+dDwd5sOaGnhwDGh6YdG7St/zknsgBiKhBwDluN9yNEiapwx6CdnE+mu9GSSwXgxfJWrIH71RqsirQkPNjQXciVJ8RgYmNqGRAG550z+DQBKWIzZF7STBp4DFWWOvJxxDhDSu6QiTJAQBvbYiUc5ZLR4AZwUyWehuECzo1qUICqJLdCQwoBZFVre2qXJxR5p6Yo"
+		<BackOnlyNav logoSrc="logo.svg" />
+		<Banner
+			highRes="images/about/1.webp"
+			lowRes="data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAAAQBwCdASrAADAAP/3+/3+/uD+7pXK92/A/iWUA1JHiwTKtUwx5w5nhJMaZw4wxZruAowYMi1sXZR/NbcfOLhT7eADVfqSkJs4V4v1KADJKfHcyRnlBwprOIlEHy/J/QgrObDSNbp3mJ3kltoLdtVOVCSqoVu1GCSq9lTg7808NAmPVOPsEeZMwjkg0nUR8E8Oh2QYYFAXuNmgNkFjjAPUoOzJxzRGLIXgAAA=="
 		/>
 		<Section>
 			<Heading>About us</Heading>
 			<div class="text-base mt-2 leading-relaxed max-w-3xl text-center">
 				<SectionText>
-					Weston Botanical Services was founded by scientists Peter and Nicholas Weston. Together
-					they bring over 45 years of experience and specialise in environmental science and botany
+					Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae
+					pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu
+					aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
+					Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class
+					aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos. Lorem
+					ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae
+					pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu
+					aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
+					Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class
+					aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos. Lorem
+					ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae
+					pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu
+					aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
+					Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class
+					aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos. Lorem
+					ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae
+					pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu
+					aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
+					Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class
+					aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos. Lorem
+					ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae
+					pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu
+					aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
+					Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class
+					aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+				</SectionText>
+				<br />
+				<SectionText>
+					Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae
+					pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu
+					aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
+					Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class
+					aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos. Lorem
+					ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae
+					pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu
+					aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
+					Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class
+					aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos. Lorem
+					ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae
+					pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu
+					aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
+					Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class
+					aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos. Lorem
+					ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae
+					pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu
+					aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
+					Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class
+					aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos. Lorem
+					ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae
+					pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu
+					aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
+					Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class
+					aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
 				</SectionText>
 			</div>
-		</Section>
-		<Section>
-			<Heading>Our Services</Heading>
-			<ServicesGrid
-				services={[
-					{
-						text: 'Flora Surveys, including BAM plots',
-						iconSrc: 'icons/icon-bam.svg',
-						iconAlt: 'Grid icon',
-					},
-					{
-						text: 'Threated speicies surveys',
-						iconSrc: 'icons/icon-dodo.svg',
-						iconAlt: 'Dodo icon',
-					},
-					{
-						text: 'Targeted Flora Surveys',
-						iconSrc: 'icons/icon-flora.svg',
-						iconAlt: 'Flower icon',
-					},
-					{
-						text: 'Expert Reports',
-						iconSrc: 'icons/icon-report.svg',
-						iconAlt: 'Paper with charts icon',
-					},
-					{
-						text: 'Specimen Collection',
-						iconSrc: 'icons/icon-collection.svg',
-						iconAlt: 'Plant press icon',
-					},
-					{
-						text: 'Monitoring plant populations and communities',
-						iconSrc: 'icons/icon-monitoring.svg',
-						iconAlt: 'Bar chart icon',
-					},
-					{
-						text: 'Botanical Research',
-						iconSrc: 'icons/icon-microscope.svg',
-						iconAlt: 'Microscope Icon',
-					},
-					{
-						text: 'Botanical Education',
-						iconSrc: 'icons/icon-education.svg',
-						iconAlt: 'University Icon',
-					},
-				]}
-			/>
-			<div style="margin-top:2rem;">
-				<Button buttonType="primary">LEARN MORE</Button>
-			</div>
-		</Section>
-		<Section color="theme">
-			<h1 class="text-4xl font-bold leading-tight">Our Projects</h1>
-			<CardGrid
-				cards={[
-					{
-						title: 'Some project name',
-						image: 'projects/project1/1.webp',
-						imageAlt: 'Man measuring treeline',
-						description:
-							'Elit. Aenean commodo ligula eget dolor. Aenean magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat mass',
-					},
-					{
-						title: 'Another rad name',
-						image: 'projects/project1/2.webp',
-						imageAlt: 'Man measuring treeline',
-						description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean mass',
-					},
-					{
-						title: 'cool name',
-						image: 'projects/project1/3.webp',
-						imageAlt: 'Man measuring treeline',
-						description:
-							'Lorem ipsum dolor sit dolor. Aenean massa. Cum sociis natoque penatibus et, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat mass',
-					},
-				]}
-			/>
-		</Section>
-		<Section className="flex flex-col md:flex-row gap-4 p-12 mb-0!" color="black">
-			<div class="pl-2 pr-2 mt-20 w-[80%] md:w-[30%]">
-				<h1 class="text-4xl font-bold leading-tight text-white">Work with us</h1>
-				<Paragraph
-					text="Join our list of satisfied clients across government and industry"
-					size="medium"
-					fontWeight={100}
-					alignment="left"
-					color="#fefefe"
-				/>
-				<br />
-				<Button buttonType="primary"> Lets talk</Button>
-			</div>
-			<LogoMarquee
-				logos={[
-					{
-						src: 'logos/csiro-logo.svg',
-						alt: 'CSIRO Logo',
-					},
-					{
-						src: 'logos/npws-logo.svg',
-						alt: 'Lyre Bird Logo',
-					},
-					{
-						src: 'logos/umwelt-logo.svg',
-						alt: 'Umwelt Logo',
-					},
-					{
-						src: 'logos/dpe-logo.svg',
-						alt: 'NSW Government Logo',
-					},
-					{
-						src: 'logos/nswpf-logo.svg',
-						alt: 'NSW Police Logo',
-					},
-					{
-						src: 'logos/sydney-water-logo.svg',
-						alt: 'Sydney Water Logo',
-					},
-					{
-						src: 'logos/sbg-logo.svg',
-						alt: 'Sydney Botanical Gardens Logo',
-					},
-					{
-						src: 'logos/eco-planning-logo.svg',
-						alt: 'Eco Planning Logo',
-					},
-				]}
-			/>
 		</Section>
 	</PageCenter>
 </Layout>
