@@ -11,12 +11,33 @@ import LogoMarquee from '../components/LogoMarquee.astro';
 import Heading from '../components/Heading.astro';
 import SectionText from '../components/SectionText.astro';
 import Button from '../components/Button.astro';
+import logo from '../assets/images/logo.svg';
+import hero from '../assets/images/hero.webp';
+import iconBam from '../assets/icons/icon-bam.svg';
+import iconCollection from '../assets/icons/icon-collection.svg';
+import iconDodo from '../assets/icons/icon-dodo.svg';
+import iconEducation from '../assets/icons/icon-education.svg';
+import iconFlora from '../assets/icons/icon-flora.svg';
+import iconMicroscope from '../assets/icons/icon-microscope.svg';
+import iconMonitoring from '../assets/icons/icon-monitoring.svg';
+import iconReport from '../assets/icons/icon-report.svg';
+import projectPic1 from '../assets/images/projects/project1/1.webp';
+import projectPic2 from '../assets/images/projects/project1/2.webp';
+import projectPic3 from '../assets/images/projects/project1/3.webp';
+import csiroLogo from '../assets/logos/csiro-logo.svg';
+import dpeLogo from '../assets/logos/dpe-logo.svg';
+import ecoPlanningLogo from '../assets/logos/eco-planning-logo.svg';
+import npwsLogo from '../assets/logos/npws-logo.svg';
+import sbgLogo from '../assets/logos/sbg-logo.svg';
+import sydneyWaterLogo from '../assets/logos/sydney-water-logo.svg';
+import nswpfLogo from '../assets/logos/nswpf-logo.svg';
+import umweltLogo from '../assets/logos/umwelt-logo.svg';
 ---
 
 <Layout>
 	<PageCenter>
 		<NavBar
-			logoSrc="logo.svg"
+			logoSrc={logo.src}
 			navItems={[
 				{
 					url: './about',
@@ -34,7 +55,7 @@ import Button from '../components/Button.astro';
 		/>
 		<HeroContainer
 			text="Scientific Botanical Consulting"
-			highRes="hero.webp"
+			highRes={hero.src}
 			lowRes="data:image/webp;base64,UklGRtADAABXRUJQVlA4TMQDAAAvGMADAE0obNsGDUnFQUT/A0C+wEJB2zZMEJQ/0u4PB5EgCNHk/3nuMClI24Cpf8ndof/B/B5PGPuTySFJAMBCksrVKI1te45rfGDve98n7RN8tE62PVbZVd2dlJNvSJIkSZEkD0iaWaYn7zf3zAxVmRHh0mztTTPHkiXbyTAz7mFmT11E+7Onm2TGwJkvZEdShFb6mwOr5P3++LcngWkT5Ykc/3B/ucnm9yiYCJuwpr01hidPklucJvLctGzbS+fe4JVAChT6dFqKWZRtoTxRlGg6uZoeFSV8FAAn20t1fDjU75nOpbdG/qS1hBy2ct6lx1qJsVWBYwF0NVQSFhhYj9O2N/GvQXbevf9mmPcPo/wYxWgMFzalb8M85lH9D/9cJjiEFBf1AzekOAs0+XH9fPf//W51Xn0GighquaDFw2phxzfYVdKYdU/tWj8KSH+wbUkcl7WPQLsltMxqs+/lCpdfPPXP6z/hPvmBfzUmXlR4U/eWtlO0bLXjZJ4MnxJrcTM5NZALiDOrMf4m+Mp+zanMIhlluejpih5Mgnwk9f9KOWHU9rtn5c3u7FxGujzarv2/O0GCQyhLLFaKiB62+22iwRxLilHkBMXu3b/7HYbVWQmCaBL0+SN9/7z8XQ38q4xOwdHvVoURzZ5iRt6qiV4moL0tNrmS0KSoxZ5p4kr3Jd9vu+P2pgltYVuYKN85+vDQFVuBOM94a+yOepwP7vchQA+bOI1syZBz3rbhQyXIzqQckFm++0+VfXTpoZa6Yj9X+/OE8eYShn1WQ8IhtheWV6RvnQk7ycpDWlER66D60B5b+ocuCVgGQwd5qRIFQrVQoWtOLTelHn18XRWKzqeOu97Wa3q7IqeneLqa+3JEvAI50rjJFEFCeCOqdjz1dy5MR+jSFNqwFC6ONPluSF7NAO8CJupb67DQtq/G6Zru4M69WM5u6NFCDVIsjm3pPX1r8pdntZFrtVig4zrChHMPxvlbjFxvAMsMrWZjvdGp/f79L27w9toe3L8tuRdmV5Z640FB0gGNL4IoNPzY8HS6IoVVlMZUPvr2gu4FjBM3qFvQtvKi2gf3P0PMfIg5t+dDwd5sOaGnhwDGh6YdG7St/zknsgBiKhBwDluN9yNEiapwx6CdnE+mu9GSSwXgxfJWrIH71RqsirQkPNjQXciVJ8RgYmNqGRAG550z+DQBKWIzZF7STBp4DFWWOvJxxDhDSu6QiTJAQBvbYiUc5ZLR4AZwUyWehuECzo1qUICqJLdCQwoBZFVre2qXJxR5p6Yo"
 		/>
 		<Section>
@@ -52,42 +73,42 @@ import Button from '../components/Button.astro';
 				services={[
 					{
 						text: 'Flora Surveys, including BAM plots',
-						iconSrc: 'icons/icon-bam.svg',
+						iconSrc: iconBam.src,
 						iconAlt: 'Grid icon',
 					},
 					{
 						text: 'Threated speicies surveys',
-						iconSrc: 'icons/icon-dodo.svg',
+						iconSrc: iconDodo.src,
 						iconAlt: 'Dodo icon',
 					},
 					{
 						text: 'Targeted Flora Surveys',
-						iconSrc: 'icons/icon-flora.svg',
+						iconSrc: iconFlora.src,
 						iconAlt: 'Flower icon',
 					},
 					{
 						text: 'Expert Reports',
-						iconSrc: 'icons/icon-report.svg',
+						iconSrc: iconReport.src,
 						iconAlt: 'Paper with charts icon',
 					},
 					{
 						text: 'Specimen Collection',
-						iconSrc: 'icons/icon-collection.svg',
+						iconSrc: iconCollection.src,
 						iconAlt: 'Plant press icon',
 					},
 					{
 						text: 'Monitoring plant populations and communities',
-						iconSrc: 'icons/icon-monitoring.svg',
+						iconSrc: iconMonitoring.src,
 						iconAlt: 'Bar chart icon',
 					},
 					{
 						text: 'Botanical Research',
-						iconSrc: 'icons/icon-microscope.svg',
+						iconSrc: iconMicroscope.src,
 						iconAlt: 'Microscope Icon',
 					},
 					{
 						text: 'Botanical Education',
-						iconSrc: 'icons/icon-education.svg',
+						iconSrc: iconEducation.src,
 						iconAlt: 'University Icon',
 					},
 				]}
@@ -102,20 +123,20 @@ import Button from '../components/Button.astro';
 				cards={[
 					{
 						title: 'Some project name',
-						image: 'images/projects/project1/1.webp',
+						image: projectPic1.src,
 						imageAlt: 'Man measuring treeline',
 						description:
 							'Elit. Aenean commodo ligula eget dolor. Aenean magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat mass',
 					},
 					{
 						title: 'Another rad name',
-						image: 'images/projects/project1/2.webp',
+						image: projectPic2.src,
 						imageAlt: 'Man measuring treeline',
 						description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean mass',
 					},
 					{
 						title: 'cool name',
-						image: 'images/projects/project1/3.webp',
+						image: projectPic3.src,
 						imageAlt: 'Man measuring treeline',
 						description:
 							'Lorem ipsum dolor sit dolor. Aenean massa. Cum sociis natoque penatibus et, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat mass',
@@ -139,35 +160,35 @@ import Button from '../components/Button.astro';
 			<LogoMarquee
 				logos={[
 					{
-						src: 'logos/csiro-logo.svg',
+						src: csiroLogo.src,
 						alt: 'CSIRO Logo',
 					},
 					{
-						src: 'logos/npws-logo.svg',
+						src: npwsLogo.src,
 						alt: 'Lyre Bird Logo',
 					},
 					{
-						src: 'logos/umwelt-logo.svg',
+						src: umweltLogo.src,
 						alt: 'Umwelt Logo',
 					},
 					{
-						src: 'logos/dpe-logo.svg',
+						src: dpeLogo.src,
 						alt: 'NSW Government Logo',
 					},
 					{
-						src: 'logos/nswpf-logo.svg',
+						src: nswpfLogo.src,
 						alt: 'NSW Police Logo',
 					},
 					{
-						src: 'logos/sydney-water-logo.svg',
+						src: sydneyWaterLogo.src,
 						alt: 'Sydney Water Logo',
 					},
 					{
-						src: 'logos/sbg-logo.svg',
+						src: sbgLogo.src,
 						alt: 'Sydney Botanical Gardens Logo',
 					},
 					{
-						src: 'logos/eco-planning-logo.svg',
+						src: ecoPlanningLogo.src,
 						alt: 'Eco Planning Logo',
 					},
 				]}
