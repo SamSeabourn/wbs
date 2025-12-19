@@ -5,6 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
 	output: 'static',
 	site: 'https://samseabourn.github.io',
+	base: '/wbs/',
 
 	// @ts-expect-error No type here yet, upstream PR maybe?
 	integrations: [tailwindcss()],
