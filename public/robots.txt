@@ -1,0 +1,43 @@
+User-agent: *
+Allow: /
+
+# Traditional search engines (always allow for SEO)
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+
+# OpenAI (ChatGPT)
+User-agent: GPTBot                  # Block training crawler
+Disallow: /
+User-agent: OAI-SearchBot          # Allow search/retrieval (for citations in ChatGPT search)
+Allow: /
+User-agent: ChatGPT-User           # Allow user-triggered fetches
+Allow: /
+
+# Anthropic (Claude)
+User-agent: ClaudeBot              # Primary crawler (used for both, but often treated as training)
+Disallow: /
+# Note: Older/deprecated: anthropic-ai and claude-web (ClaudeBot respects blocks for these)
+
+# Perplexity
+User-agent: PerplexityBot          # Allow for indexing and citations in Perplexity answers
+Allow: /
+
+# Google (Gemini AI Overviews)
+User-agent: Google-Extended        # Block if you don't want use in Gemini training/AI features
+Disallow: /
+# If you want to allow Gemini citations: change to Allow: /
+
+# Common Crawl (used by many AIs for training datasets)
+User-agent: CCBot
+Disallow: /
+
+# Optional: Block other common training bots
+User-agent: Bytespider             # ByteDance (TikTok/related)
+Disallow: /
+User-agent: Amazonbot              # Amazon
+Disallow: /
+
+# Add your sitemap for better crawling
+Sitemap: https://yourdomain.com/sitemap.xml
