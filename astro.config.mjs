@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import Compress from '@playform/compress';
+import Inline from '@playform/inline';
 
 export default defineConfig({
 	output: 'static',
@@ -9,6 +10,7 @@ export default defineConfig({
 	integrations: [
 		// @ts-expect-error No types here yet, upstream PR maybe?
 		tailwindcss(),
+		Inline(),
 		Compress({
 			CSS: true,
 			HTML: true,

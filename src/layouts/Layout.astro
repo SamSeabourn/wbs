@@ -1,6 +1,5 @@
 ---
 import '../styles/global.css';
-import hero from '../assets/hero.webp';
 ---
 
 <!doctype html>
@@ -21,7 +20,7 @@ import hero from '../assets/hero.webp';
 			name="description"
 			content="Weston Botanical Services provides expert botanical consulting, including flora surveys, threatened species assessments, specimen collection, monitoring, research, and education. Founded by scientists Peter and Nicholas Weston with over 45 years of experience."
 		/>
-		<link rel="preload" as="image" href={hero.src} fetchpriority="high" />
+		<link rel="preload" as="image" href="hero.webp" fetchpriority="high" as="image" />
 	</head>
 	<body>
 		<slot />
